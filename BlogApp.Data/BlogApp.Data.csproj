@@ -19,8 +19,4 @@
     <ProjectReference Include="..\BlogApp.Shared\BlogApp.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Concrete\EntityFramework\Mappings\" />
-  </ItemGroup>
-
 </Project>
