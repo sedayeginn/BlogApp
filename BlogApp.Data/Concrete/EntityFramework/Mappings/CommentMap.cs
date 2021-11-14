@@ -28,6 +28,19 @@ namespace BlogApp.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Comments");
+            builder.HasData(new Comment
+            {
+                Id = 1,
+                ArticleId = 1,
+                Text = "dkngkğhth",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "initial",
+                ModifiedDate = DateTime.Now,
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "initial",
+                Note = "c sharp yenilikleri"
+            });
 
            
         }

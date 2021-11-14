@@ -29,7 +29,19 @@ namespace BlogApp.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Categories");
 
-           
+            builder.HasData(new Category
+            {
+                Id = 1,
+                Name = "c sharp",
+                Description = "c sharp anlatım",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "initial",
+                ModifiedDate = DateTime.Now,
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "initial",
+                Note = "c sharp blok kategorisi",
+            });
         }
     }
 }

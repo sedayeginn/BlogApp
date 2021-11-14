@@ -26,6 +26,20 @@ namespace BlogApp.Data.Concrete.EntityFramework.Mappings
             builder.Property(r => r.IsDeleted).IsRequired();
             builder.Property(r => r.Note).HasMaxLength(500);
             builder.ToTable("Roles");
+            builder.HasData(new Role
+            {
+                Id = 1,
+                Name = "ADMİN",
+                Description = "admin rolü",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "initialcreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName="initial",
+                ModifiedDate=DateTime.Now,
+                Note="admin rolüdür"
+            });
+            
 
           
 

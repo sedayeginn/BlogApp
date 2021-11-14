@@ -19,7 +19,7 @@ namespace BlogApp.Data.Concrete.EntityFramework.Contexts
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\\mssqllocaldb;Database=Blog-App;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer(@"Server=.;Database=myblogApp;User Id=sa;Password=123;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

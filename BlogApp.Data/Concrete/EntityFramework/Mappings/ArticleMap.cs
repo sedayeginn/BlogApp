@@ -37,6 +37,26 @@ namespace BlogApp.Data.Concrete.EntityFramework.Mappings
             builder.HasOne<Category>(a => a.Category).WithMany(c => c.Articles).HasForeignKey(a=>a.CategoryId); //bir kategorinin birden fazla makalesi olabilir
             builder.HasOne<User>(a => a.User).WithMany(u => u.Articles).HasForeignKey(a => a.UserId);
             builder.ToTable("Articles");
+            builder.HasData(new Article
+            {
+                Id = 1,
+                CategoryId = 1,
+                Title = "c sharp 9 yenilikleri",
+                Content = "dsnafonfaıohegoh",
+                Thumbnail = "Default.jpg",
+                SeoDescription = "c sharp",
+                SeoTags="c sharp....",
+                SeoAuthor="seda yegin",
+                Date=DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "initial",
+                ModifiedDate = DateTime.Now,
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "initial",
+                Note = "c sharp yenilikleri",
+                UserId=1
+            });
 
         }
     }
