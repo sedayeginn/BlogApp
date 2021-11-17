@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BlogApp.Data\BlogApp.Data.csproj" />
     <ProjectReference Include="..\BlogApp.Entities\BlogApp.Entities.csproj" />
     <ProjectReference Include="..\BlogApp.Shared\BlogApp.Shared.csproj" />
